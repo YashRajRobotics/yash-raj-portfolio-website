@@ -1,0 +1,40 @@
+{
+  "entities": {
+    "Post": {
+      "title": "Post",
+      "description": "A blog post.",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string", "description": "The title of the post." },
+        "slug": { "type": "string", "description": "URL-friendly identifier." },
+        "content": { "type": "string", "description": "Markdown content." },
+        "excerpt": { "type": "string", "description": "Short summary." },
+        "publishedAt": { "type": "timestamp", "description": "When the post was published." },
+        "authorId": { "type": "string", "description": "UID of the author." },
+        "tags": { "type": "array", "items": { "type": "string" }, "description": "Tags for the post." },
+        "isPublished": { "type": "boolean", "description": "Whether the post is public." }
+      },
+      "required": ["title", "slug", "content", "authorId", "isPublished"]
+    },
+    "User": {
+      "title": "User",
+      "description": "A user profile.",
+      "type": "object",
+      "properties": {
+        "email": { "type": "string", "format": "email" },
+        "role": { "type": "string", "enum": ["admin", "user"] }
+      },
+      "required": ["email", "role"]
+    }
+  },
+  "firestore": {
+    "/posts/{postId}": {
+      "schema": { "$ref": "#/entities/Post" },
+      "description": "Blog posts collection."
+    },
+    "/users/{userId}": {
+      "schema": { "$ref": "#/entities/User" },
+      "description": "User profiles collection."
+    }
+  }
+}
