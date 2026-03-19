@@ -1,9 +1,11 @@
 import { useState } from 'react';
-import { signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
+import { signInWithPopup, GoogleAuthProvider, signOut } from 'firebase/auth';
 import { auth } from '../firebase';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { Terminal } from 'lucide-react';
+
+const ADMIN_EMAIL = 'krish.chetan.shah@gmail.com';
 
 export default function Login() {
   const [error, setError] = useState('');
@@ -16,7 +18,11 @@ export default function Login() {
     const provider = new GoogleAuthProvider();
     
     try {
-      await signInWithPopup(auth, provider);
+      const result = await signInWithPopup(auth, provider);
+      if (result.user.email !== ADMIN_EMAIL) {
+        await signOut(auth);
+        throw new Error('Unauthorized email address. Access denied.');
+      }
       navigate('/admin');
     } catch (err: any) {
       console.error("Login error:", err);
