@@ -35,7 +35,7 @@ export default function Home() {
             transition={{ delay: 0.2 }}
             className="font-mono text-[#00FF00] tracking-widest text-sm"
           >
-            01 // YASH RAJ - DATA SCIENTIST
+            01 // YASH RAJ - DATA SCIENTIST (portfolio-website)
           </motion.div>
           
           <h1 className="text-7xl md:text-9xl font-black tracking-tighter uppercase leading-[0.85] text-white">
