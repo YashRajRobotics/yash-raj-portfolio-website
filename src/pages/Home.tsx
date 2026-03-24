@@ -2,7 +2,6 @@ import { motion } from 'motion/react';
 import { Github, Linkedin, Mail, ArrowRight, Code2, Terminal, Cpu, Brain, ChevronDown, ChevronUp } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import error
 
 const PROJECTS_DATA = [
   { number: "01", title: "Nexus Analytics", description: "Real-time data visualization dashboard for enterprise metrics.", tags: ["React", "D3.js", "Firebase"] },
