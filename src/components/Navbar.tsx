@@ -17,7 +17,7 @@ export default function Navbar({ user }: { user: User | null }) {
         <div className="flex justify-between h-16 items-center">
           <Link to="/" className="flex items-center space-x-2 text-white hover:text-[#00FF00] transition-colors">
             <Terminal size={24} />
-            <span className="font-mono font-bold tracking-tighter text-lg">YASH RAJ</span>
+            <span className="font-mono font-bold tracking-tighter text-lg">YASH_RAJ</span>
           </Link>
           
           <div className="flex items-center space-x-8">
