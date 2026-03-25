@@ -35,7 +35,7 @@ export default function Home() {
             transition={{ delay: 0.2 }}
             className="font-mono text-[#00FF00] tracking-widest text-sm"
           >
-            01 // YASH RAJ - DATA SCIENTIST (portfolio-website)
+            01 // YASH RAJ - DATA SCIENTIST
           </motion.div>
           
           <h1 className="text-7xl md:text-9xl font-black tracking-tighter uppercase leading-[0.85] text-white">
@@ -47,7 +47,7 @@ export default function Home() {
           </h1>
           
           <p className="max-w-xl text-xl text-white/60 font-light leading-relaxed">
-            I craft high-performance web applications, scalable systems, and innovative digital experiences. Specializing in modern React, Node.js, and cloud architecture.
+            I build intelligent applications using machine learning, large language models, and data-driven systems to solve real-world problems at scale.
           </p>
           
           <div className="flex items-center space-x-6 pt-8">
@@ -60,8 +60,8 @@ export default function Home() {
             </Link>
             
             <div className="flex space-x-4">
-              <SocialLink href="https://github.com/yashrajrobotics" icon={<Github />} />
-              <SocialLink href="https://www.linkedin.com/in/yash-raj-rwth/" icon={<Linkedin />} />
+              <SocialLink href="https://github.com/krishcshah" icon={<Github />} />
+              <SocialLink href="https://www.linkedin.com/in/krishcshah/" icon={<Linkedin />} />
               <SocialLink href="mailto:hello@krishshah.de" icon={<Mail />} />
             </div>
           </div>
