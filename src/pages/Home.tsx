@@ -49,6 +49,7 @@ export default function Home() {
   const [showAllHackathons, setShowAllHackathons] = useState(false);
   const visibleProjects = showAllProjects ? PROJECTS_DATA : PROJECTS_DATA.slice(0, 4);
   const visibleHackathons = showAllHackathons ? HACKATHONS_DATA : HACKATHONS_DATA.slice(0, 3);
+  const scriptFontStyle = { fontFamily: "'Playwrite Ireland', cursive" };
   return (
     <motion.div 
       initial={{ opacity: 0, y: 20 }}
@@ -90,18 +91,19 @@ export default function Home() {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2 }}
-            className="font-mono font-bold text-[#6255F1] tracking-widest text-xs md:text-sm"
+            className="font-bold text-[#6255F1] tracking-widest text-xs md:text-sm"
+            style={scriptFontStyle}
           >
             YASH RAJ - DATA SCIENTIST
           </motion.div>
           
-          <h1 className="text-5xl sm:text-7xl md:text-9xl font-black tracking-tighter uppercase leading-[0.85] text-transparent bg-clip-text bg-gradient-to-r from-[#6255F1] to-sky-600">
+          <h1 className="text-5xl sm:text-7xl md:text-9xl font-black tracking-tighter uppercase leading-[0.85] text-transparent bg-clip-text bg-gradient-to-r from-[#6255F1] to-sky-600" style={scriptFontStyle}>
             Building<br />
             Solutions<br />
             USING AI
           </h1>
           
-          <p className="max-w-xl text-lg md:text-xl text-[#0C080A] font-light leading-relaxed pointer-events-auto">
+          <p className="max-w-xl text-lg md:text-xl text-[#0C080A] font-light leading-relaxed pointer-events-auto" style={scriptFontStyle}>
             I design and deploy machine learning systems for real-world impact, specializing in NLP, computer vision, and time series modeling. Experienced in building scalable pipelines and data-driven solutions.
           </p>
         </div>
@@ -111,7 +113,7 @@ export default function Home() {
       <section className="border-t border-[#D8CDEE] pt-24 pb-24">
         <div className="mb-0 md:sticky md:top-56 z-0 py-0">
           <h2 className="text-4xl font-black uppercase tracking-tighter">Work Experience</h2>
-          <p className="text-[#0C080A] mt-4 font-mono text-sm max-w-[35ch]">My Professional Journey.</p>
+          <p className="text-[#0C080A] mt-4 text-sm max-w-[35ch]">My Professional Journey.</p>
         </div>
         
         <div className="space-y-12 relative md:-mt-16 before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-[#0C080A] hover:before:via-[#6255F1] before:to-transparent">
@@ -145,7 +147,7 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div className="col-span-1 md:sticky md:top-56 self-start h-fit z-0 py-0">
             <h2 className="text-4xl font-black uppercase tracking-tighter">The Stack</h2>
-            <p className="text-[#0C080A] mt-4 font-mono text-sm max-w-[35ch]">Tools and technologies I use to bring ideas to life.</p>
+            <p className="text-[#0C080A] mt-4 text-sm max-w-[35ch]">Tools and technologies I use to bring ideas to life.</p>
           </div>
           <div className="col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-8">
             <SkillCard 
@@ -176,7 +178,7 @@ export default function Home() {
       <section className="border-t border-[#D8CDEE] pt-24 pb-24">
         <div className="mb-0 md:sticky md:top-56 z-0 py-0">
           <h2 className="text-4xl sm:text-5xl md:text-5xl font-black uppercase tracking-tighter">Projects</h2>
-          <a href="https://github.com/YashRajRobotics" target="_blank" rel="noopener noreferrer" className="inline-block mt-4 font-bold text-[#6255F1] font-mono text-sm hover:underline underline-offset-4">
+          <a href="https://github.com/YashRajRobotics" target="_blank" rel="noopener noreferrer" className="inline-block mt-4 font-bold text-[#6255F1] text-sm hover:underline underline-offset-4">
             VIEW ALL ON GITHUB [→]
           </a>
         </div>
@@ -196,7 +198,7 @@ export default function Home() {
           <div className="mt-12 flex justify-center">
             <button
               onClick={() => setShowAllProjects(!showAllProjects)}
-              className="group flex items-center space-x-2 border border-[#6255F1] font-bold text-[#6255F1] px-6 py-3 font-mono text-sm uppercase tracking-widest hover:bg-[#6255F1] hover:text-black transition-colors"
+              className="group flex items-center space-x-2 border border-[#6255F1] font-bold text-[#6255F1] px-6 py-3 text-sm uppercase tracking-widest hover:bg-[#6255F1] hover:text-black transition-colors"
             >
               <span>{showAllProjects ? 'Show Less' : 'Show More'}</span>
               {showAllProjects ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
@@ -209,7 +211,7 @@ export default function Home() {
       <section className="border-t border-[#D8CDEE] pt-24 pb-24">
         <div className="mb-0 md:sticky md:top-56 z-0 py-0">
           <h2 className="text-4xl font-black uppercase tracking-tighter">Research</h2>
-          <p className="text-[#0C080A] mt-4 font-mono text-sm max-w-[35ch]">Published Research Papers and Publications.</p>
+          <p className="text-[#0C080A] mt-4 text-sm max-w-[35ch]">Published Research Papers and Publications.</p>
         </div>
         
         <div className="space-y-12 relative md:-mt-16 before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-[#0C080A] hover:before:via-[#6255F1] before:to-transparent">
@@ -237,7 +239,7 @@ export default function Home() {
       <section className="border-t border-[#D8CDEE] pt-24 pb-24">
         <div className="mb-0 md:sticky md:top-56 z-0 py-0">
           <h2 className="text-4xl font-black uppercase tracking-tighter">Education</h2>
-          <p className="text-[#0C080A] mt-4 font-mono text-sm max-w-[35ch]">My Academic Journey.</p>
+          <p className="text-[#0C080A] mt-4 text-sm max-w-[35ch]">My Academic Journey.</p>
         </div>
         
         <div className="space-y-12 relative md:-mt-16 before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-[#0C080A] hover:before:via-[#6255F1] before:to-transparent">
@@ -270,7 +272,7 @@ export default function Home() {
       <section className="border-t border-[#D8CDEE] pt-24 pb-24">
         <div className="mb-0 md:sticky md:top-56 z-0 py-0">
           <h2 className="text-4xl font-black uppercase tracking-tighter">Hackathons</h2>
-          <p className="text-[#0C080A] mt-4 font-mono text-sm max-w-[35ch]">Competitions and hackathons I have participated in.</p>
+          <p className="text-[#0C080A] mt-4 text-sm max-w-[35ch]">Competitions and hackathons I have participated in.</p>
         </div>
 
         <div className="space-y-12 relative md:-mt-16 before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-[#0C080A] hover:before:via-[#6255F1] before:to-transparent">
@@ -290,7 +292,7 @@ export default function Home() {
           <div className="mt-12 flex justify-center">
             <button
               onClick={() => setShowAllHackathons(!showAllHackathons)}
-              className="group flex items-center space-x-2 border border-[#6255F1] font-bold text-[#6255F1] px-6 py-3 font-mono text-sm uppercase tracking-widest hover:bg-[#6255F1] hover:text-black transition-colors"
+              className="group flex items-center space-x-2 border border-[#6255F1] font-bold text-[#6255F1] px-6 py-3 text-sm uppercase tracking-widest hover:bg-[#6255F1] hover:text-black transition-colors"
             >
               <span>{showAllHackathons ? 'Show Less' : 'Show More'}</span>
               {showAllHackathons ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
@@ -303,7 +305,7 @@ export default function Home() {
       <section className="border-t border-[#D8CDEE] pt-24 pb-24">
         <div className="mb-0 md:sticky md:top-56 z-0 py-0">
           <h2 className="text-4xl font-black uppercase tracking-tighter">Seminars Presented</h2>
-          <p className="text-[#0C080A] mt-4 font-mono text-sm max-w-[35ch]">Technical talks and seminar sessions I have presented.</p>
+          <p className="text-[#0C080A] mt-4 text-sm max-w-[35ch]">Technical talks and seminar sessions I have presented.</p>
         </div>
 
         <div className="space-y-12 relative md:-mt-16 before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-[#0C080A] hover:before:via-[#6255F1] before:to-transparent">
@@ -329,7 +331,7 @@ function SkillCard({ icon, title, skills }: { icon: React.ReactNode, title: stri
     <div className="p-8 border border-[#0C080A] bg-[#EBEBEB] hover:bg-[#E1E1E1] transition-colors">
       <div className="mb-6">{icon}</div>
       <h3 className="text-xl font-bold uppercase tracking-wide mb-4">{title}</h3>
-      <ul className="space-y-2 font-mono text-sm text-[#0C080A]">
+      <ul className="space-y-2 text-sm text-[#0C080A]">
         {skills.map(skill => (
           <li key={skill} className="flex items-center space-x-2">
             <span className="font-bold text-[#6255F1]">&gt;</span>
@@ -355,7 +357,7 @@ function ProjectCard({ title, description, skills }: { title: string, descriptio
         <p className="text-[#0C080A] font-light mb-6 min-h-[3.5rem]">{description}</p>
         <div className="flex flex-wrap gap-2">
           {skills.map(skill => (
-            <span key={skill} className="text-xs font-mono px-2 py-1 border border-[#0C080A] bg-[#FFFFFF] text-[#0C080A]">
+            <span key={skill} className="text-xs px-2 py-1 border border-[#0C080A] bg-[#FFFFFF] text-[#0C080A]">
               {skill}
             </span>
           ))}
@@ -375,9 +377,9 @@ function TimelineItem({ year, title, organization, description }: { year: string
       <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] md:ml-auto p-6 rounded-none border border-[#0C080A] bg-[#EBEBEB] hover:border-[#0C080A] transition-colors">
         <div className="flex flex-col md:flex-row md:items-center justify-between mb-2 gap-2">
           <h3 className="font-bold text-xl uppercase tracking-tight text-[#0C080A]">{title}</h3>
-          <span className="font-mono font-bold text-[#6255F1] text-sm shrink-0">{year}</span>
+          <span className="font-bold text-[#6255F1] text-sm shrink-0">{year}</span>
         </div>
-        <div className="text-[#0C080A] font-mono text-sm mb-4">{organization}</div>
+        <div className="text-[#0C080A] text-sm mb-4">{organization}</div>
         <p className="text-[#0C080A] font-light text-sm leading-relaxed">{description}</p>
       </div>
     </div>
@@ -396,13 +398,13 @@ function ResearchPaperItem({ year, title, link, description, citations }: { year
           <a href={link} target="_blank" rel="noopener noreferrer" className="block max-w-[25ch] font-bold text-xl uppercase tracking-tight text-[#0C080A] hover:text-[#6255F1] transition-colors whitespace-normal break-normal">
             {title}
           </a>
-          <span className="font-mono font-bold text-[#6255F1] text-sm shrink-0">{year}</span>
+          <span className="font-bold text-[#6255F1] text-sm shrink-0">{year}</span>
         </div>
         <div className="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-2">
-          <a href={link} target="_blank" rel="noopener noreferrer" className="text-[#0C080A] font-mono text-sm hover:text-[#6255F1] transition-colors">
+          <a href={link} target="_blank" rel="noopener noreferrer" className="text-[#0C080A] text-sm hover:text-[#6255F1] transition-colors">
             Link: {link}
           </a>
-          <span className="font-mono font-black text-[#6255F1] text-sm shrink-0">Citations: {citations}</span>
+          <span className="font-black text-[#6255F1] text-sm shrink-0">Citations: {citations}</span>
         </div>
         <p className="text-[#0C080A] font-light text-sm leading-relaxed">{description}</p>
       </div>
@@ -422,11 +424,11 @@ function HackathonItem({ date, title, location, rank, description }: { date: str
           <h3 className="block max-w-[25ch] font-bold text-xl uppercase tracking-tight text-[#0C080A] hover:text-[#6255F1] transition-colors whitespace-normal break-normal">
             {title}
           </h3>
-          <span className="font-mono font-bold text-[#6255F1] text-sm shrink-0">{date}</span>
+          <span className="font-bold text-[#6255F1] text-sm shrink-0">{date}</span>
         </div>
         <div className="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-2">
-          <span className="text-[#0C080A] font-mono text-sm">Location : {location}</span>
-          <span className="max-w-[25ch] text-right font-mono text-[#0C080A] text-sm whitespace-normal break-words shrink-0">{rank ? <>Rank : {rank}</> : '\u00A0'}</span>
+          <span className="text-[#0C080A] text-sm">Location : {location}</span>
+          <span className="max-w-[25ch] text-right text-[#0C080A] text-sm whitespace-normal break-words shrink-0">{rank ? <>Rank : {rank}</> : '\u00A0'}</span>
         </div>
         <p className="text-[#0C080A] font-light text-sm leading-relaxed min-h-[3rem]">{description}</p>
       </div>
@@ -451,16 +453,16 @@ function SeminarItem({ title, linkTitle, date, location, link, description }: { 
             <h3 className="block max-w-[25ch] font-bold text-xl uppercase tracking-tight text-[#0C080A] whitespace-normal break-normal">{title}</h3>
           )}
           {link ? (
-            <a href={linkTitle || `https://${link}`} target="_blank" rel="noopener noreferrer" className="text-right text-[#0C080A] font-mono text-sm hover:text-[#6255F1] transition-colors">
+            <a href={linkTitle || `https://${link}`} target="_blank" rel="noopener noreferrer" className="text-right text-[#0C080A] text-sm hover:text-[#6255F1] transition-colors">
               Link : {link}
             </a>
           ) : (
-            <span className="text-right text-[#0C080A] font-mono text-sm">&nbsp;</span>
+            <span className="text-right text-[#0C080A] text-sm">&nbsp;</span>
           )}
         </div>
         <div className="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-2">
-          <span className="text-[#0C080A] font-mono text-sm">Location : {location}</span>
-          <span className="font-mono font-bold text-[#6255F1] text-sm shrink-0">{date}</span>
+          <span className="text-[#0C080A] text-sm">Location : {location}</span>
+          <span className="font-bold text-[#6255F1] text-sm shrink-0">{date}</span>
         </div>
         <p className="text-[#0C080A] font-light text-sm leading-relaxed min-h-[3rem]">{description}</p>
       </div>

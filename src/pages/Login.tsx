@@ -46,12 +46,12 @@ export default function Login() {
         <h1 className="text-3xl font-black uppercase tracking-tighter text-center mb-2">
           System Access
         </h1>
-        <p className="text-center font-mono text-sm text-[#0C080A] mb-8">
+        <p className="text-center text-sm text-[#0C080A] mb-8">
           Authorized personnel only.
         </p>
 
         {error && (
-          <div className="bg-red-500/10 border border-red-500/50 text-red-500 p-4 mb-6 font-mono text-xs">
+          <div className="bg-red-500/10 border border-red-500/50 text-red-500 p-4 mb-6 text-xs">
             &gt; ERROR: {error}
           </div>
         )}
@@ -59,7 +59,7 @@ export default function Login() {
         <button
           onClick={handleLogin}
           disabled={loading}
-          className="w-full py-4 bg-[#6255F1] text-black font-mono font-bold uppercase tracking-widest hover:bg-white transition-colors disabled:opacity-50 flex justify-center items-center space-x-2"
+          className="w-full py-4 bg-[#6255F1] text-black font-bold uppercase tracking-widest hover:bg-white transition-colors disabled:opacity-50 flex justify-center items-center space-x-2"
         >
           {loading ? (
             <div className="w-4 h-4 border-2 border-black border-t-transparent rounded-full animate-spin" />

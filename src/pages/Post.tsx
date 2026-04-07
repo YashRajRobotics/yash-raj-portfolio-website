@@ -65,8 +65,8 @@ export default function Post() {
     return (
       <div className="text-center py-20">
         <h1 className="text-4xl font-black uppercase tracking-tighter mb-4">404</h1>
-        <p className="font-mono text-[#0C080A] mb-8">Post not found.</p>
-        <Link to="/blog" className="font-bold text-[#6255F1] font-mono hover:underline">Return to Blog</Link>
+        <p className="text-[#0C080A] mb-8">Post not found.</p>
+        <Link to="/blog" className="font-bold text-[#6255F1] hover:underline">Return to Blog</Link>
       </div>
     );
   }
@@ -77,7 +77,7 @@ export default function Post() {
       animate={{ opacity: 1, y: 0 }}
       className="max-w-3xl mx-auto py-12"
     >
-      <Link to="/blog" className="inline-flex items-center space-x-2 text-[#0C080A] hover:font-bold text-[#6255F1] font-mono text-sm mb-12 transition-colors">
+      <Link to="/blog" className="inline-flex items-center space-x-2 text-[#0C080A] hover:font-bold text-[#6255F1] text-sm mb-12 transition-colors">
         <ArrowLeft size={16} />
         <span>BACK TO LOG</span>
       </Link>
@@ -87,7 +87,7 @@ export default function Post() {
           {post.title}
         </h1>
         
-        <div className="flex flex-wrap items-center gap-4 font-mono text-sm text-[#0C080A]">
+        <div className="flex flex-wrap items-center gap-4 text-sm text-[#0C080A]">
           <time className="font-bold text-[#6255F1]">
             {post.publishedAt ? format(post.publishedAt.toDate(), 'MMMM dd, yyyy') : 'Draft'}
           </time>

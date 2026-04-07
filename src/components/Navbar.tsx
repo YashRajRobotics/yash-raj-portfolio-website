@@ -6,6 +6,7 @@ import { Github, Linkedin, Mail } from 'lucide-react';
 
 export default function Navbar({ user }: { user: User | null }) {
   const location = useLocation();
+  const scriptFontStyle = { fontFamily: "'Playwrite Ireland', cursive" };
 
   const handleLogout = async () => {
     await signOut(auth);
@@ -16,7 +17,7 @@ export default function Navbar({ user }: { user: User | null }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           <Link to="/" className="flex items-center space-x-2 text-[#0C080A] hover:font-bold text-[#6255F1] transition-colors">
-            <span className="font-black uppercase tracking-tighter text-lg sm:text-xl">YASH RAJ</span>
+            <span className="font-black uppercase tracking-tighter text-lg sm:text-xl" style={scriptFontStyle}>YASH RAJ</span>
           </Link>
           
           <div className="flex items-center space-x-4 md:space-x-8">
@@ -51,7 +52,7 @@ export default function Navbar({ user }: { user: User | null }) {
                 <NavLink to="/admin" current={location.pathname}>ADMIN</NavLink>
                 <button 
                   onClick={handleLogout}
-                  className="text-xs font-mono tracking-widest text-[#0C080A] hover:text-red-400 transition-colors"
+                  className="text-xs tracking-widest text-[#0C080A] hover:text-red-400 transition-colors"
                 >
                   LOGOUT
                 </button>
@@ -70,7 +71,7 @@ function NavLink({ to, children, current }: { to: string, children: React.ReactN
   return (
     <Link 
       to={to} 
-      className={`relative text-xs font-mono tracking-widest transition-colors ${
+      className={`relative text-xs tracking-widest transition-colors ${
         isActive ? 'font-bold text-[#6255F1]' : 'text-[#0C080A] hover:text-[#0C080A]'
       }`}
     >

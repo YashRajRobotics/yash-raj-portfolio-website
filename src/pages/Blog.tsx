@@ -50,7 +50,7 @@ export default function Blog() {
         <h1 className="text-6xl md:text-8xl font-black uppercase tracking-tighter mb-4">
           The <span className="font-bold text-[#6255F1]">Log</span>
         </h1>
-        <p className="font-mono text-[#0C080A] text-sm tracking-widest uppercase">
+        <p className="text-[#0C080A] text-sm tracking-widest uppercase">
           Thoughts, tutorials, and technical deep dives.
         </p>
       </div>
@@ -61,7 +61,7 @@ export default function Blog() {
         </div>
       ) : posts.length === 0 ? (
         <div className="text-center py-20 border border-dashed border-[#0C080A]">
-          <p className="font-mono text-[#0C080A]">No posts found. Check back later.</p>
+          <p className="text-[#0C080A]">No posts found. Check back later.</p>
         </div>
       ) : (
         <div className="space-y-12">
@@ -75,7 +75,7 @@ export default function Blog() {
             >
               <Link to={`/blog/${post.slug}`} className="block">
                 <div className="flex flex-col md:flex-row md:items-baseline gap-4 mb-4">
-                  <time className="font-mono text-sm font-bold text-[#6255F1] shrink-0 w-32">
+                  <time className="text-sm font-bold text-[#6255F1] shrink-0 w-32">
                     {post.publishedAt ? format(post.publishedAt.toDate(), 'MMM dd, yyyy') : 'Draft'}
                   </time>
                   <h2 className="text-3xl md:text-4xl font-bold tracking-tight group-hover:font-bold text-[#6255F1] transition-colors">
@@ -90,7 +90,7 @@ export default function Blog() {
                   
                   <div className="flex flex-wrap gap-2">
                     {post.tags?.map(tag => (
-                      <span key={tag} className="text-xs font-mono px-2 py-1 bg-[#EBEBEB] text-[#0C080A] uppercase tracking-wider">
+                      <span key={tag} className="text-xs px-2 py-1 bg-[#EBEBEB] text-[#0C080A] uppercase tracking-wider">
                         {tag}
                       </span>
                     ))}

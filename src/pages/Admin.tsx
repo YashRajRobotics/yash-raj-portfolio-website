@@ -208,12 +208,12 @@ export default function Admin() {
       <div className="flex justify-between items-end mb-12 border-b border-[#D8CDEE] pb-8">
         <div>
           <h1 className="text-5xl font-black uppercase tracking-tighter mb-2">Command Center</h1>
-          <p className="font-mono text-[#0C080A] text-sm tracking-widest uppercase">Admin Dashboard</p>
+          <p className="text-[#0C080A] text-sm tracking-widest uppercase">Admin Dashboard</p>
         </div>
         {!isCreating && (
           <button 
             onClick={() => setIsCreating(true)}
-            className="flex items-center space-x-2 bg-[#6255F1] text-black px-6 py-3 font-mono font-bold uppercase tracking-wider hover:bg-white transition-colors"
+            className="flex items-center space-x-2 bg-[#6255F1] text-black px-6 py-3 font-bold uppercase tracking-wider hover:bg-white transition-colors"
           >
             <Plus size={18} />
             <span>New Post</span>
@@ -232,14 +232,14 @@ export default function Admin() {
               <div className="flex space-x-4">
                 <button 
                   onClick={() => setPreviewMode(!previewMode)}
-                  className="text-xs font-mono text-[#0C080A] hover:font-bold text-[#6255F1] flex items-center space-x-1"
+                  className="text-xs text-[#0C080A] hover:font-bold text-[#6255F1] flex items-center space-x-1"
                 >
                   <Eye size={14} />
                   <span>{previewMode ? 'EDIT' : 'PREVIEW'}</span>
                 </button>
                 <button 
                   onClick={resetForm}
-                  className="text-xs font-mono text-[#0C080A] hover:text-red-400"
+                  className="text-xs text-[#0C080A] hover:text-red-400"
                 >
                   CANCEL
                 </button>
@@ -248,7 +248,7 @@ export default function Admin() {
 
             <form onSubmit={handleSave} className="space-y-6">
               <div className="space-y-2">
-                <label className="text-xs font-mono text-[#0C080A] uppercase tracking-widest">Title</label>
+                <label className="text-xs text-[#0C080A] uppercase tracking-widest">Title</label>
                 <input 
                   type="text" 
                   value={title}
@@ -259,64 +259,64 @@ export default function Admin() {
                     }
                   }}
                   required
-                  className="w-full bg-[#EBEBEB] border border-[#0C080A] px-4 py-3 text-[#0C080A] focus:outline-none focus:border-[#6255F1] transition-colors font-mono"
+                  className="w-full bg-[#EBEBEB] border border-[#0C080A] px-4 py-3 text-[#0C080A] focus:outline-none focus:border-[#6255F1] transition-colors"
                   placeholder="Post Title"
                 />
               </div>
 
               <div className="space-y-2">
-                <label className="text-xs font-mono text-[#0C080A] uppercase tracking-widest">Slug</label>
+                <label className="text-xs text-[#0C080A] uppercase tracking-widest">Slug</label>
                 <input 
                   type="text" 
                   value={slug}
                   onChange={(e) => setSlug(e.target.value)}
                   required
-                  className="w-full bg-[#EBEBEB] border border-[#0C080A] px-4 py-3 text-[#0C080A] focus:outline-none focus:border-[#6255F1] transition-colors font-mono"
+                  className="w-full bg-[#EBEBEB] border border-[#0C080A] px-4 py-3 text-[#0C080A] focus:outline-none focus:border-[#6255F1] transition-colors"
                   placeholder="post-slug-url"
                 />
               </div>
 
               <div className="space-y-2">
-                <label className="text-xs font-mono text-[#0C080A] uppercase tracking-widest">Excerpt</label>
+                <label className="text-xs text-[#0C080A] uppercase tracking-widest">Excerpt</label>
                 <textarea 
                   value={excerpt}
                   onChange={(e) => setExcerpt(e.target.value)}
-                  className="w-full bg-[#EBEBEB] border border-[#0C080A] px-4 py-3 text-[#0C080A] focus:outline-none focus:border-[#6255F1] transition-colors font-mono h-24 resize-none"
+                  className="w-full bg-[#EBEBEB] border border-[#0C080A] px-4 py-3 text-[#0C080A] focus:outline-none focus:border-[#6255F1] transition-colors h-24 resize-none"
                   placeholder="Short summary..."
                 />
               </div>
 
               <div className="space-y-2">
-                <label className="text-xs font-mono text-[#0C080A] uppercase tracking-widest">Content (Markdown)</label>
+                <label className="text-xs text-[#0C080A] uppercase tracking-widest">Content (Markdown)</label>
                 <textarea 
                   value={content}
                   onChange={(e) => setContent(e.target.value)}
                   required
-                  className="w-full bg-[#EBEBEB] border border-[#0C080A] px-4 py-3 text-[#0C080A] focus:outline-none focus:border-[#6255F1] transition-colors font-mono h-96 resize-y"
+                  className="w-full bg-[#EBEBEB] border border-[#0C080A] px-4 py-3 text-[#0C080A] focus:outline-none focus:border-[#6255F1] transition-colors h-96 resize-y"
                   placeholder="# Write your post here..."
                 />
               </div>
 
               <div className="space-y-2">
-                <label className="text-xs font-mono text-[#0C080A] uppercase tracking-widest">Tags (comma separated)</label>
+                <label className="text-xs text-[#0C080A] uppercase tracking-widest">Tags (comma separated)</label>
                 <input 
                   type="text" 
                   value={tags}
                   onChange={(e) => setTags(e.target.value)}
-                  className="w-full bg-[#EBEBEB] border border-[#0C080A] px-4 py-3 text-[#0C080A] focus:outline-none focus:border-[#6255F1] transition-colors font-mono"
+                  className="w-full bg-[#EBEBEB] border border-[#0C080A] px-4 py-3 text-[#0C080A] focus:outline-none focus:border-[#6255F1] transition-colors"
                   placeholder="react, typescript, web"
                 />
               </div>
 
               <div className="space-y-2">
-                <label className="text-xs font-mono text-[#0C080A] uppercase tracking-widest">Publication Date</label>
+                <label className="text-xs text-[#0C080A] uppercase tracking-widest">Publication Date</label>
                 <input 
                   type="date" 
                   value={publishedDate}
                   onChange={(e) => setPublishedDate(e.target.value)}
-                  className="w-full bg-[#EBEBEB] border border-[#0C080A] px-4 py-3 text-[#0C080A] focus:outline-none focus:border-[#6255F1] transition-colors font-mono custom-date-input"
+                  className="w-full bg-[#EBEBEB] border border-[#0C080A] px-4 py-3 text-[#0C080A] focus:outline-none focus:border-[#6255F1] transition-colors custom-date-input"
                 />
-                <p className="text-xs text-[#0C080A] font-mono">Leave blank to use current date when published.</p>
+                <p className="text-xs text-[#0C080A]">Leave blank to use current date when published.</p>
               </div>
 
               <div className="flex items-center space-x-3 pt-4">
@@ -327,7 +327,7 @@ export default function Admin() {
                   onChange={(e) => setIsPublished(e.target.checked)}
                   className="w-5 h-5 bg-[#EBEBEB] border border-[#0C080A] font-bold text-[#6255F1] focus:ring-[#6255F1] focus:ring-offset-0"
                 />
-                <label htmlFor="isPublished" className="text-sm font-mono text-[#0C080A] uppercase tracking-widest">
+                <label htmlFor="isPublished" className="text-sm text-[#0C080A] uppercase tracking-widest">
                   Publish Post
                 </label>
               </div>
@@ -337,7 +337,7 @@ export default function Admin() {
                   type="button"
                   onClick={handleRefineWithAI}
                   disabled={isRefining}
-                  className="w-full flex justify-center items-center space-x-2 bg-white/10 text-[#0C080A] px-6 py-4 font-mono font-bold uppercase tracking-wider hover:bg-white/20 transition-colors disabled:opacity-50"
+                  className="w-full flex justify-center items-center space-x-2 bg-white/10 text-[#0C080A] px-6 py-4 font-bold uppercase tracking-wider hover:bg-white/20 transition-colors disabled:opacity-50"
                 >
                   {isRefining ? (
                     <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
@@ -349,7 +349,7 @@ export default function Admin() {
 
                 <button 
                   type="submit"
-                  className="w-full flex justify-center items-center space-x-2 bg-[#6255F1] text-black px-6 py-4 font-mono font-bold uppercase tracking-wider hover:bg-white transition-colors"
+                  className="w-full flex justify-center items-center space-x-2 bg-[#6255F1] text-black px-6 py-4 font-bold uppercase tracking-wider hover:bg-white transition-colors"
                 >
                   <Save size={18} />
                   <span>Save Post</span>
@@ -365,14 +365,14 @@ export default function Admin() {
               <div className="flex space-x-4">
                 <button 
                   onClick={() => setPreviewMode(!previewMode)}
-                  className="text-xs font-mono text-[#0C080A] hover:font-bold text-[#6255F1] flex items-center space-x-1"
+                  className="text-xs text-[#0C080A] hover:font-bold text-[#6255F1] flex items-center space-x-1"
                 >
                   <Eye size={14} />
                   <span>EDIT</span>
                 </button>
                 <button 
                   onClick={resetForm}
-                  className="text-xs font-mono text-[#0C080A] hover:text-red-400"
+                  className="text-xs text-[#0C080A] hover:text-red-400"
                 >
                   CANCEL
                 </button>
@@ -411,7 +411,7 @@ export default function Admin() {
         </div>
       ) : (
         <div className="overflow-x-auto border border-[#0C080A]">
-          <table className="w-full text-left font-mono text-sm">
+          <table className="w-full text-left text-sm">
             <thead className="bg-[#EBEBEB] text-[#0C080A] uppercase tracking-widest">
               <tr>
                 <th className="px-6 py-4 font-normal">Title</th>
