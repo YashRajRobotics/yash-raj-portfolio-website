@@ -1,6 +1,6 @@
-# Krish Shah's Portfolio Website
+# Yash Raj's Portfolio Website
 
-Welcome to the source code for my personal portfolio website and blog. Here you can find information about my projects, skills, and read my latest blog posts.
+Welcome to the source code for my personal portfolio website. Here you can find information about my projects, skills, hackathons, and other details.
 
 ## Tech Stack
 
@@ -27,8 +27,8 @@ To run this project on your local machine, follow these steps:
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/krishcshah/krish-shah-portfolio-website.git
-    cd krish-shah-portfolio-website
+    git clone https://github.com/YashRajRobotics/yash-raj-portfolio-website.git
+    cd yash-raj-portfolio-website
     ```
 
 2.  **Install dependencies:**
