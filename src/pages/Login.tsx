@@ -38,15 +38,15 @@ export default function Login() {
       animate={{ opacity: 1, scale: 1 }}
       className="min-h-[80vh] flex items-center justify-center"
     >
-      <div className="w-full max-w-md p-8 border border-white/10 bg-white/5 backdrop-blur-sm">
+      <div className="w-full max-w-md p-8 border border-[#0C080A] bg-[#EBEBEB] backdrop-blur-sm">
         <div className="flex justify-center mb-8">
-          <Terminal size={48} className="text-[#00FF00]" />
+          <Terminal size={48} className="font-bold text-[#6255F1]" />
         </div>
         
         <h1 className="text-3xl font-black uppercase tracking-tighter text-center mb-2">
           System Access
         </h1>
-        <p className="text-center font-mono text-sm text-white/50 mb-8">
+        <p className="text-center font-mono text-sm text-[#0C080A] mb-8">
           Authorized personnel only.
         </p>
 
@@ -59,7 +59,7 @@ export default function Login() {
         <button
           onClick={handleLogin}
           disabled={loading}
-          className="w-full py-4 bg-[#00FF00] text-black font-mono font-bold uppercase tracking-widest hover:bg-white transition-colors disabled:opacity-50 flex justify-center items-center space-x-2"
+          className="w-full py-4 bg-[#6255F1] text-black font-mono font-bold uppercase tracking-widest hover:bg-white transition-colors disabled:opacity-50 flex justify-center items-center space-x-2"
         >
           {loading ? (
             <div className="w-4 h-4 border-2 border-black border-t-transparent rounded-full animate-spin" />

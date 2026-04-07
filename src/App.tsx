@@ -36,12 +36,12 @@ export default function App() {
   }, []);
 
   if (loading) {
-    return <div className="min-h-screen bg-[#050505] flex items-center justify-center text-white">Loading...</div>;
+    return <div className="min-h-screen bg-[#FFFFFF] flex items-center justify-center text-[#0C080A]">Loading...</div>;
   }
 
   return (
     <Router>
-      <div className="min-h-screen bg-[#050505] text-[#E4E3E0] font-sans selection:bg-[#00FF00] selection:text-black">
+      <div className="min-h-screen bg-[#FFFFFF] text-[#0C080A] selection:bg-[#6255F1] selection:text-white">
         <Navbar user={user} />
         <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-12">
           <Routes>

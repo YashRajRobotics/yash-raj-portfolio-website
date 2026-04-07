@@ -56,7 +56,7 @@ export default function Post() {
   if (loading) {
     return (
       <div className="flex justify-center items-center min-h-[60vh]">
-        <div className="w-8 h-8 border-2 border-[#00FF00] border-t-transparent rounded-full animate-spin" />
+        <div className="w-8 h-8 border-2 border-[#6255F1] border-t-transparent rounded-full animate-spin" />
       </div>
     );
   }
@@ -65,8 +65,8 @@ export default function Post() {
     return (
       <div className="text-center py-20">
         <h1 className="text-4xl font-black uppercase tracking-tighter mb-4">404</h1>
-        <p className="font-mono text-white/50 mb-8">Post not found.</p>
-        <Link to="/blog" className="text-[#00FF00] font-mono hover:underline">Return to Blog</Link>
+        <p className="font-mono text-[#0C080A] mb-8">Post not found.</p>
+        <Link to="/blog" className="font-bold text-[#6255F1] font-mono hover:underline">Return to Blog</Link>
       </div>
     );
   }
@@ -77,7 +77,7 @@ export default function Post() {
       animate={{ opacity: 1, y: 0 }}
       className="max-w-3xl mx-auto py-12"
     >
-      <Link to="/blog" className="inline-flex items-center space-x-2 text-white/50 hover:text-[#00FF00] font-mono text-sm mb-12 transition-colors">
+      <Link to="/blog" className="inline-flex items-center space-x-2 text-[#0C080A] hover:font-bold text-[#6255F1] font-mono text-sm mb-12 transition-colors">
         <ArrowLeft size={16} />
         <span>BACK TO LOG</span>
       </Link>
@@ -87,8 +87,8 @@ export default function Post() {
           {post.title}
         </h1>
         
-        <div className="flex flex-wrap items-center gap-4 font-mono text-sm text-white/50">
-          <time className="text-[#00FF00]">
+        <div className="flex flex-wrap items-center gap-4 font-mono text-sm text-[#0C080A]">
+          <time className="font-bold text-[#6255F1]">
             {post.publishedAt ? format(post.publishedAt.toDate(), 'MMMM dd, yyyy') : 'Draft'}
           </time>
           <span>//</span>
@@ -100,7 +100,7 @@ export default function Post() {
         </div>
       </header>
 
-      <div className="prose prose-invert prose-lg max-w-none prose-p:leading-relaxed prose-headings:font-bold prose-headings:tracking-tight prose-a:text-[#00FF00] hover:prose-a:text-white prose-pre:bg-[#0a0a0a] prose-pre:border prose-pre:border-white/10 prose-code:text-[#00FF00]">
+      <div className="prose  prose-lg max-w-none prose-p:leading-relaxed prose-headings:font-bold prose-headings:tracking-tight prose-a:font-bold text-[#6255F1] hover:prose-a:text-[#0C080A] prose-pre:bg-[#FFFFFF] prose-pre:border prose-pre:border-[#0C080A] prose-code:font-bold text-[#6255F1]">
         <ReactMarkdown 
           remarkPlugins={[remarkGfm]} 
           rehypePlugins={[rehypeRaw]}

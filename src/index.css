@@ -1,2 +1,14 @@
 @import "tailwindcss";
 @config "../tailwind.config.js";
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+Ireland:wght@400&display=swap');
+
+html,
+body,
+#root {
+	min-height: 100%;
+}
+
+body {
+	font-family: 'Playwrite Ireland', cursive;
+	font-weight: 400;
+}
